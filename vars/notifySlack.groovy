@@ -23,7 +23,7 @@ def call(String buildStatus = 'STARTED') {
         imageurl = 'https://www.jenkins.io/images/logos/fire/fire.png'
     }
 
-    blocks = [
+    "blocks": [
         {
             "type": "section",
             "text": {
