@@ -19,5 +19,5 @@ def call(String buildStatus = 'STARTED') {
         colorCode = '#FF0000'
     }
 
-    slackSend(color: "colorCode", message: summary)
+    slackSend(color: colorCode, message: summary)
 }
