@@ -23,26 +23,26 @@ def call(String buildStatus = 'STARTED') {
         imageurl = 'https://www.jenkins.io/images/logos/fire/fire.png'
     }
 
-    "blocks": [
-        {
+    blocks = [
+        [
             "type": "section",
-            "text": {
+            "text": [
                 "type": "mrkdown",
                 "text": subject
-            }
-        },
-        {
+            ]
+        ],
+        [
             "type": "section",
-            "text": {
+            "text": [
                 "type": "mrkdwn",
                 "text": buildurl
-            },
-            "accessory": {
+            ],
+            "accessory": [
                 "type": "image",
                 "image_url": imageurl,
                 "alt_text": "Jenkins Artwork"
-            }
-        }
+            ]
+        ]
     ]
 
     slackSend(color: colorCode, blocks: blocks)
