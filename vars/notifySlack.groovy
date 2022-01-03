@@ -27,7 +27,7 @@ def call(String buildStatus = 'STARTED') {
         [
             "type": "section",
             "text": [
-                "type": "mrkdown",
+                "type": "mrkdwn",
                 "text": subject
             ]
         ],
