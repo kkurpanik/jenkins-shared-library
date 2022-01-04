@@ -6,11 +6,11 @@ def call(String buildStatus = 'STARTED') {
     def imageurl = 'https://www.jenkins.io/images/logos/fire/fire.png'
     def msg = "Your job failed:"
     def subject = "*${msg}\n<${env.BUILD_URL}|Build details>"
-    def section = "*Job name:*\nl${env.JOB_NAME}\n*Build number:*\n${env.BUILD_NUMBER}"
+    def section = "*Job name:*\n${env.JOB_NAME}\n*Build number:*\n${env.BUILD_NUMBER}"
 
     if (buildStatus == 'STARTED') {
         msg = "Your job started:"
-        imageurl = 'https://www.jenkins.io/images/logos/formal/formal.png'
+        imageurl = 'https://www.jenkins.io/images/logos/general/general.png'
     } else if (buildStatus == 'SUCCESSFUL') {
         msg= "Your job finished successfully:"
         imageurl = 'https://www.jenkins.io/images/logos/cute/cute.png'
@@ -19,7 +19,7 @@ def call(String buildStatus = 'STARTED') {
         imageurl = 'https://www.jenkins.io/images/logos/fire/fire.png'
     }
 
-    subject = "*${msg}\n<${env.BUILD_URL}|Build details>"
+    subject = "*${msg}*\n<${env.BUILD_URL}|Build details>"
     
     blocks = [
         [
