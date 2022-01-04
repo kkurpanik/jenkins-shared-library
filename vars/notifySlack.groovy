@@ -10,7 +10,7 @@ def call(String buildStatus = 'STARTED') {
 
     if (buildStatus == 'STARTED') {
         msg = "Your job started:"
-        imageurl = 'https://www.jenkins.io/images/logos/general/general.png'
+        imageurl = 'https://www.jenkins.io/images/logos/stay-safe/stay-safe.png'
     } else if (buildStatus == 'SUCCESSFUL') {
         msg= "Your job finished successfully:"
         imageurl = 'https://www.jenkins.io/images/logos/cute/cute.png'
